@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Mental Health Pattern Recognition Assistant</title>
+    <meta name="description" content="Expert insights on mental health patterns, triggers, and wellness strategies from PhD-level mental health professionals.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- External CDN resources -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/image-paths.css">
+    <!-- Fix CSS -->
+    <link rel="stylesheet" href="css/fixes.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>MindPattern</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="d-flex">
+                    <li><a href="features.html" class="nav-link">Features</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="investment.html" class="nav-link">Invest</a></li>
+                    <li><a href="donate.html" class="nav-link">Donate</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="signup.html" class="btn btn-primary">Sign Up</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero bg-gradient-primary">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="text-light reveal">Mental Health Insights</h1>
+                <p class="hero-subtitle text-light reveal">Expert perspectives on mental health patterns, triggers, and wellness strategies.</p>
+            </div>
+        </div>
+        <div class="wave-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Blog Categories Section -->
+    <section class="blog-categories">
+        <div class="container">
+            <div class="categories-container reveal">
+                <div class="category-tabs">
+                    <button class="category-tab active" data-category="all">All Topics</button>
+                    <button class="category-tab" data-category="patterns">Pattern Recognition</button>
+                    <button class="category-tab" data-category="research">Research & Studies</button>
+                    <button class="category-tab" data-category="strategies">Wellness Strategies</button>
+                    <button class="category-tab" data-category="technology">Mental Health Tech</button>
+                </div>
+                
+                <div class="search-container">
+                    <form class="search-form">
+                        <input type="text" placeholder="Search articles..." class="search-input">
+                        <button type="submit" class="search-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article Section -->
+    <section class="featured-article">
+        <div class="container">
+            <div class="featured-article-container reveal">
+                <div class="featured-article-image hover-lift">
+                    <img src="images/blog-featured.jpg" alt="The Neurological Basis of Mental Health Patterns">
+                    <div class="featured-badge">Featured</div>
+                </div>
+                <div class="featured-article-content">
+                    <div class="article-meta">
+                        <span class="article-category">Research & Studies</span>
+                        <span class="article-date">March 10, 2025</span>
+                    </div>
+                    <h2 class="featured-article-title">The Neurological Basis of Mental Health Patterns: New Discoveries in 2025</h2>
+                    <p class="featured-article-excerpt">Recent advances in neuroimaging have revealed how the brain forms and maintains patterns related to mental health conditions. This comprehensive review examines the latest research and its implications for pattern recognition in mental health tracking.</p>
+                    <div class="article-author">
+                        <img src="images/author-dr-chen.jpg" alt="Dr. Rebecca Chen" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Dr. Rebecca Chen, Ph.D.</h4>
+                            <p>Neuroscientist & Mental Health Researcher</p>
+                        </div>
+                    </div>
+                    <a href="blog-post-1.html" class="btn btn-primary magnetic-button">Read Article</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Articles Section -->
+    <section class="latest-articles bg-light">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Latest Articles</h2>
+            
+            <div class="articles-grid">
+                <div class="article-card interactive-card reveal">
+                    <div class="article-image">
+                        <img src="images/blog-post-1.jpg" alt="Pattern Recognition in Anxiety Disorders">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Pattern Recognition</span>
+                            <span class="article-date">March 8, 2025</span>
+                        </div>
+                        <h3 class="article-title">Pattern Recognition in Anxiety Disorders: Identifying Triggers Before They Escalate</h3>
+                        <p class="article-excerpt">Examining how early pattern recognition can help individuals with anxiety disorders identify and address triggers before they lead to acute episodes.</p>
+                        <div class="article-author">
+                            <img src="images/author-dr-patel.jpg" alt="Dr. Amir Patel" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Dr. Amir Patel, Ph.D.</h4>
+                                <p>Clinical Psychologist</p>
+                            </div>
+                        </div>
+                        <a href="blog-post-2.html" class="article-link">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="article-card interactive-card reveal">
+                    <div class="article-image">
+                        <img src="images/blog-post-2.jpg" alt="Digital Phenotyping">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Technology</span>
+                            <span class="article-date">March 5, 2025</span>
+                        </div>
+                        <h3 class="article-title">Digital Phenotyping: How AI is Revolutionizing Mental Health Pattern Detection</h3>
+                        <p class="article-excerpt">An in-depth look at how digital phenotyping and artificial intelligence are transforming our ability to detect and respond to mental health patterns.</p>
+                        <div class="article-author">
+                            <img src="images/author-dr-johnson.jpg" alt="Dr. Sarah Johnson" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Dr. Sarah Johnson, Ph.D.</h4>
+                                <p>AI & Mental Health Specialist</p>
+                            </div>
+                        </div>
+                        <a href="blog-post-3.html" class="article-link">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="article-card interactive-card reveal">
+                    <div class="article-image">
+                        <img src="images/blog-post-3.jpg" alt="Circadian Rhythms">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Research & Studies</span>
+                            <span class="article-date">March 1, 2025</span>
+                        </div>
+                        <h3 class="article-title">Circadian Rhythms and Mood Disorders: The Temporal Patterns of Mental Health</h3>
+                        <p class="article-excerpt">New research reveals the complex relationship between circadian rhythms, sleep patterns, and mood disorders, with implications for pattern-based interventions.</p>
+                        <div class="article-author">
+                            <img src="images/author-dr-rodriguez.jpg" alt="Dr. Elena Rodriguez" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Dr. Elena Rodriguez, Ph.D.</h4>
+                                <p>Chronobiology Researcher</p>
+                            </div>
+                        </div>
+                        <a href="blog-post-4.html" class="article-link">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="article-card interactive-card reveal">
+                    <div class="article-image">
+                        <img src="images/blog-post-4.jpg" alt="Mindfulness Practices">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Wellness Strategies</span>
+                            <span class="article-date">February 25, 2025</span>
+                        </div>
+                        <h3 class="article-title">Evidence-Based Mindfulness Practices for Breaking Negative Thought Patterns</h3>
+                        <p class="article-excerpt">A comprehensive review of mindfulness techniques that have been scientifically validated for disrupting negative thought patterns and promoting mental wellbeing.</p>
+                        <div class="article-author">
+                            <img src="images/author-dr-williams.jpg" alt="Dr. Michael Williams" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Dr. Michael Williams, Ph.D.</h4>
+                                <p>Mindfulness Researcher</p>
+                            </div>
+                        </div>
+                        <a href="blog-post-5.html" class="article-link">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="article-card interactive-card reveal">
+                    <div class="article-image">
+                        <img src="images/blog-post-5.jpg" alt="Social Media and Mental Health">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Pattern Recognition</span>
+                            <span class="article-date">February 20, 2025</span>
+                        </div>
+                        <h3 class="article-title">Social Media Usage Patterns and Their Impact on Mental Health: A Meta-Analysis</h3>
+                        <p class="article-excerpt">Examining the complex relationship between social media usage patterns and mental health outcomes, with recommendations for healthier digital habits.</p>
+                        <div class="article-author">
+                            <img src="images/author-dr-thompson.jpg" alt="Dr. James Thompson" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Dr. James Thompson, Ph.D.</h4>
+                                <p>Digital Psychology Expert</p>
+                            </div>
+                        </div>
+                        <a href="blog-post-6.html" class="article-link">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="article-card interactive-card reveal">
+                    <div class="article-image">
+                        <img src="images/blog-post-6.jpg" alt="Nutritional Psychiatry">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Wellness Strategies</span>
+                            <span class="article-date">February 15, 2025</span>
+                        </div>
+                        <h3 class="article-title">Nutritional Psychiatry: How Dietary Patterns Influence Mental Health</h3>
+                        <p class="article-excerpt">The emerging field of nutritional psychiatry reveals how dietary patterns can significantly impact mental health, with evidence-based recommendations for optimal nutrition.</p>
+                        <div class="article-author">
+                            <img src="images/author-dr-kim.jpg" alt="Dr. Jennifer Kim" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Dr. Jennifer Kim, Ph.D.</h4>
+                                <p>Nutritional Psychiatrist</p>
+                            </div>
+                        </div>
+                        <a href="blog-post-7.html" class="article-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination reveal">
+                <a href="#" class="pagination-prev disabled" aria-label="Previous page">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                </a>
+                <div class="pagination-numbers">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <span class="pagination-dots">...</span>
+                    <a href="#">8</a>
+                </div>
+                <a href="#" class="pagination-next" aria-label="Next page">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-container reveal">
+                <div class="newsletter-content">
+                    <h2>Stay Updated with the Latest Mental Health Insights</h2>
+                    <p>Subscribe to our newsletter to receive the latest articles, research findings, and wellness strategies directly in your inbox.</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Your email address" required class="form-control">
+                            <button type="submit" class="btn btn-primary magnetic-button">Subscribe</button>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="newsletter-consent" required>
+                            <label for="newsletter-consent">I agree to receive emails from MindPattern. You can unsubscribe at any time.</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="newsletter-image">
+                    <img src="images/newsletter-illustration.svg" alt="Newsletter Illustration" class="hover-lift">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Experts Section -->
+    <section class="experts-section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Meet Our Expert Contributors</h2>
+            <p class="section-subtitle text-center reveal">Our articles are written by leading mental health professionals with extensive academic and clinical experience.</p>
+            
+            <div class="experts-grid">
+                <div class="expert-card reveal">
+                    <div class="expert-photo">
+                        <img src="images/author-dr-chen.jpg" alt="Dr. Rebecca Chen">
+                    </div>
+                    <h3>Dr. Rebecca Chen, Ph.D.</h3>
+                    <p class="expert-role">Neuroscientist & Mental Health Researcher</p>
+                    <p class="expert-bio">Dr. Chen is a neuroscientist specializing in the neurological basis of mental health patterns. She holds a Ph.D. from Stanford University and has published over 30 peer-reviewed papers on brain function and mental health.</p>
+                    <div class="expert-credentials">
+                        <span class="credential">Ph.D. in Neuroscience</span>
+                        <span class="credential">Research Fellow at National Institute of Mental Health</span>
+                        <span class="credential">Author of "The Patterned Brain"</span>
+                    </div>
+                </div>
+                
+                <div class="expert-card reveal">
+                    <div class="expert-photo">
+                        <img src="images/author-dr-patel.jpg" alt="Dr. Amir Patel">
+                    </div>
+                    <h3>Dr. Amir Patel, Ph.D.</h3>
+                    <p class="expert-role">Clinical Psychologist</p>
+                    <p class="expert-bio">Dr. Patel specializes in anxiety disorders and pattern recognition in clinical settings. With 15 years of clinical experience, he combines research with practical therapeutic approaches to help patients identify and address triggers.</p>
+                    <div class="expert-credentials">
+                        <span class="credential">Ph.D. in Clinical Psychology</span>
+                        <span class="credential">Director of Anxiety Treatment Center</span>
+                        <span class="credential">Certified in Cognitive Behavioral Therapy</span>
+                    </div>
+                </div>
+                
+                <div class="expert-card reveal">
+                    <div class="expert-photo">
+                        <img src="images/author-dr-johnson.jpg" alt="Dr. Sarah Johnson">
+                    </div>
+                    <h3>Dr. Sarah Johnson, Ph.D.</h3>
+                    <p class="expert-role">AI & Mental Health Specialist</p>
+                    <p class="expert-bio">Dr. Johnson's research focuses on the intersection of artificial intelligence and mental health. She develops algorithms for detecting mental health patterns and has pioneered work in digital phenotyping for early intervention.</p>
+                    <div class="expert-credentials">
+                        <span class="credential">Ph.D. in Computer Science</span>
+                        <span class="credential">M.D. with specialization in Psychiatry</span>
+                        <span class="credential">Lead Researcher at Digital Mental Health Institute</span>
+                    </div>
+                </div>
+                
+                <div class="expert-card reveal">
+                    <div class="expert-photo">
+                        <img src="images/author-dr-rodriguez.jpg" alt="Dr. Elena Rodriguez">
+                    </div>
+                    <h3>Dr. Elena Rodriguez, Ph.D.</h3>
+                    <p class="expert-role">Chronobiology Researcher</p>
+                    <p class="expert-bio">Dr. Rodriguez studies the relationship between biological rhythms and mental health. Her research has revealed important connections between circadian patterns, sleep, and mood disorders, leading to new therapeutic approaches.</p>
+                    <div class="expert-credentials">
+                        <span class="credential">Ph.D. in Chronobiology</span>
+                        <span class="credential">Research Professor at University of California</span>
+                        <span class="credential">Author of "Time and Mind: The Rhythms of Mental Health"</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="experts-cta text-center reveal">
+                <a href="#" class="btn btn-outline btn-lg">View All Contributors</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section class="topics-section">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Explore Topics</h2>
+            
+            <div class="topics-grid reveal">
+                <a href="#" class="topic-card interactive-card">
+                    <div class="topic-icon">
+                        <img src="images/icon-anxiety.svg" alt="Anxiety & Stress">
+                    </div>
+                    <h3>Anxiety & Stress</h3>
+                    <p>Understanding patterns and triggers in anxiety disorders and stress responses.</p>
+                </a>
+                
+                <a href="#" class="topic-card interactive-card">
+                    <div class="topic-icon">
+                        <img src="images/icon-mood.svg" alt="Mood Disorders">
+                    </div>
+                    <h3>Mood Disorders</h3>
+                    <p>Exploring patterns in depression, bipolar disorder, and other mood conditions.</p>
+                </a>
+                
+                <a href="#" class="topic-card interactive-card">
+                    <div class="topic-icon">
+                        <img src="images/icon-sleep.svg" alt="Sleep & Mental Health">
+                    </div>
+                    <h3>Sleep & Mental Health</h3>
+                    <p>The critical relationship between sleep patterns and mental wellbeing.</p>
+                </a>
+                
+                <a href="#" class="topic-card interactive-card">
+                    <div class="topic-icon">
+                        <img src="images/icon-nutrition.svg" alt="Nutrition & Mental Health">
+                    </div>
+                    <h3>Nutrition & Mental Health</h3>
+                    <p>How dietary patterns influence brain function and mental health.</p>
+                </a>
+                
+                <a href="#" class="topic-card interactive-card">
+                    <div class="topic-icon">
+                        <img src="images/icon-technology.svg" alt="Digital Mental Health">
+                    </div>
+                    <h3>Digital Mental Health</h3>
+                    <p>Innovations in technology for mental health tracking and intervention.</p>
+                </a>
+                
+                <a href="#" class="topic-card interactive-card">
+                    <div class="topic-icon">
+                        <img src="images/icon-mindfulness.svg" alt="Mindfulness & Meditation">
+                    </div>
+                    <h3>Mindfulness & Meditation</h3>
+                    <p>Evidence-based practices for mental health and pattern disruption.</p>
+                </a>
+                
+                <a href="#" class="topic-card interactive-card">
+                    <div class="topic-icon">
+                        <img src="images/icon-relationships.svg" alt="Relationships & Mental Health">
+                    </div>
+                    <h3>Relationships & Mental Health</h3>
+                    <p>How relationship patterns impact psychological wellbeing.</p>
+                </a>
+                
+                <a href="#" class="topic-card interactive-card">
+                    <div class="topic-icon">
+                        <img src="images/icon-research.svg" alt="Latest Research">
+                    </div>
+                    <h3>Latest Research</h3>
+                    <p>Cutting-edge studies and findings in mental health science.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section bg-light">
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2>Ready to Discover Your Mental Health Patterns?</h2>
+                <p>Sign up for MindPattern today and start your journey toward better mental wellbeing through AI-powered pattern recognition.</p>
+                <div class="cta-buttons">
+                    <a href="signup.html" class="btn btn-primary btn-lg magnetic-button">Sign Up Now</a>
+                    <a href="features.html" class="btn btn-outline btn-lg">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>MindPattern</h3>
+                    <p>Revolutionizing mental health tracking with AI-powered pattern recognition technology.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="icon-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="icon-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="icon-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="investment.html">Investors</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for the latest updates and insights.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 MindPattern. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Category tabs functionality
+            const categoryTabs = document.querySelectorAll('.category-tab');
+            
+            categoryTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    categoryTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+                    
+                    // In a real implementation, this would filter articles by category
+                    const category = tab.getAttribute('data-category');
+                    console.log(`Filtering by category: ${category}`);
+                    
+                    // For demo purposes, we'll just log the category
+                    // In a real implementation, we would show/hide articles based on category
+                });
+            });
+            
+            // Search form functionality
+            const searchForm = document.querySelector('.search-form');
+            if (searchForm) {
+                searchForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const searchInput = this.querySelector('.search-input');
+                    const searchTerm = searchInput.value.trim();
+                    
+                    // In a real implementation, this would search articles
+                    console.log(`Searching for: ${searchTerm}`);
+                    
+                    // For demo purposes, we'll just log the search term
+                    // In a real implementation, we would filter articles based on search term
+                });
+            }
+            
+            // Newsletter form functionality
+            const newsletterForm = document.querySelector('.newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const emailInput = this.querySelector('input[type="email"]');
+                    const email = emailInput.value.trim();
+                    
+                    // In a real implementation, this would subscribe the user
+                    console.log(`Subscribing email: ${email}`);
+                    
+                    // Simulate form submission
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Subscribing...';
+                    
+                    setTimeout(() => {
+                        // Create success message
+                        const formGroup = this.querySelector('.form-group');
+                        formGroup.innerHTML = '<div class="subscription-success"><h4>Thank you for subscribing!</h4><p>You\'ll now receive our latest mental health insights directly in your inbox.</p></div>';
+                        
+                        // Reset form (hidden but reset for if we want to show it again)
+                        this.reset();
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Subscribe';
+                    }, 1500);
+                });
+            }
+            
+            // Pagination functionality
+            const paginationLinks = document.querySelectorAll('.pagination a');
+            if (paginationLinks.length > 0) {
+                paginationLinks.forEach(link => {
+                    if (!link.classList.contains('disabled')) {
+                        link.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            
+                            // Remove active class from all pagination links
+                            document.querySelectorAll('.pagination-numbers a').forEach(a => {
+                                a.classList.remove('active');
+                            });
+                            
+                            // If it's a numbered link, add active class
+                            if (this.parentNode.classList.contains('pagination-numbers')) {
+                                this.classList.add('active');
+                            }
+                            
+                            // In a real implementation, this would load the next page of articles
+                            console.log(`Navigating to page: ${this.textContent}`);
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+    <script src="js/image-fix.js"></script>
+    <script src="js/svg-fix.js"></script>
+</body>
+</html>

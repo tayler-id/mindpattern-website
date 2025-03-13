@@ -1,0 +1,148 @@
+/* Fixes for MindPattern Website */
+
+/* Fix mobile menu toggle delay */
+.mobile-menu-toggle {
+  transition-delay: 0ms;
+}
+
+/* Fix hero animation flickering in Safari */
+.hero-image svg {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Fix testimonial slider dots misalignment */
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 var(--spacing-4);
+  position: relative;
+  z-index: 2;
+}
+
+/* Fix wave animation in footer */
+.wave-animation {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.wave-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"><path d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18.17 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z" fill="%23111827" opacity=".25"/></svg>') repeat-x;
+  animation: wave 25s linear infinite;
+  transform: translateY(0);
+}
+
+/* Fix statistics counter triggering multiple times */
+.counter.counted {
+  animation: none;
+}
+
+/* Fix form submission showing success message before completion */
+.form-success {
+  display: none;
+  background-color: #10B981;
+  color: white;
+  padding: 12px;
+  border-radius: 5px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.form-success.active {
+  display: block;
+}
+
+/* Fix newsletter signup validation message positioning */
+.newsletter-form {
+  position: relative;
+}
+
+.newsletter-form .validation-message {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  font-size: 14px;
+  color: #EF4444;
+}
+
+/* Fix social media links */
+.social-links a {
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+  background-color: #6366F1;
+}
+
+/* Fix responsive issues */
+@media (max-width: 768px) {
+  .hero-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .hero-cta {
+    justify-content: center;
+  }
+  
+  .hero-image {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 80%;
+    margin: 32px auto 0;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* Fix image paths */
+.hero-image {
+  background-image: none;
+}
+
+.testimonial-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 12px;
+  background-color: #e9ecef;
+}
+
+/* Fix SVG icons */
+.icon-brain, .icon-pattern, .icon-chart, .icon-shield, .icon-user, .icon-check, .icon-arrow-right {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.icon-brain, .icon-pattern, .icon-chart, .icon-shield {
+  width: 48px;
+  height: 48px;
+}
+
+/* Add CDN references for fonts and icons */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css');

@@ -1,0 +1,125 @@
+# MindPattern Website Development Rules
+
+## SVG Implementation Patterns
+
+1. **Inline SVGs for Critical UI Elements**
+   - Use inline SVGs for important UI elements like step illustrations and hero graphics
+   - Benefits: Faster loading, no external requests, ability to style with CSS
+   - Example: Step illustrations in "How It Works" section use inline SVGs
+
+2. **SVG Icon System**
+   - Use consistent SVG icons from Bootstrap Icons library
+   - Apply currentColor for easy theming
+   - Keep icon sizes consistent (24px for UI elements, 48px for feature icons)
+
+3. **SVG Animation Techniques**
+   - Use CSS for simple animations (hover effects, transitions)
+   - Use JavaScript for complex animations (floating elements, parallax)
+   - Ensure animations have appropriate performance optimizations
+
+## CSS Organization
+
+1. **Design System Structure**
+   - Base styles in design-system.css
+   - Component-specific styles in styles.css
+   - Utility classes for common patterns
+   - Media queries at the end of each file
+
+2. **Variable Naming Conventions**
+   - Use --prefix for all CSS variables
+   - Color variables follow --color-name-shade pattern
+   - Spacing variables follow --spacing-size pattern
+   - Z-index variables follow --z-level pattern
+
+3. **Responsive Breakpoints**
+   - Mobile first approach
+   - Breakpoints at 480px, 768px, 1024px, 1280px
+   - Use min-width queries for progressive enhancement
+
+## JavaScript Patterns
+
+1. **Animation Performance**
+   - Use requestAnimationFrame for smooth animations
+   - Debounce scroll events
+   - Use CSS transforms and opacity for animations when possible
+   - Avoid layout thrashing by batching DOM reads and writes
+
+2. **Interactive Elements**
+   - Use consistent hover and focus states
+   - Implement keyboard navigation for all interactive elements
+   - Ensure proper ARIA attributes for accessibility
+
+3. **Feature Detection**
+   - Check for feature support before using modern APIs
+   - Provide fallbacks for older browsers
+   - Use feature queries (@supports) in CSS when appropriate
+
+## Image Handling
+
+1. **SVG vs Raster**
+   - Use SVGs for icons, illustrations, and UI elements
+   - Use raster images (WebP preferred) for photos and complex graphics
+   - Provide appropriate fallbacks for SVGs
+
+2. **Responsive Images**
+   - Use srcset and sizes attributes for responsive images
+   - Implement lazy loading for below-the-fold images
+   - Optimize image file sizes without sacrificing quality
+
+3. **Placeholder Strategy**
+   - Use lightweight placeholder images during loading
+   - Implement progressive loading for large images
+   - Use appropriate alt text for all images
+
+## Performance Considerations
+
+1. **Resource Loading**
+   - Critical CSS inlined in head
+   - Non-critical CSS loaded asynchronously
+   - JavaScript deferred when possible
+   - Preload critical resources
+
+2. **Animation Performance**
+   - Use CSS properties that trigger only compositing (transform, opacity)
+   - Avoid animations that trigger layout or paint
+   - Use will-change property sparingly and appropriately
+
+3. **Rendering Optimization**
+   - Minimize DOM depth
+   - Avoid layout thrashing
+   - Use CSS containment where appropriate
+   - Implement virtualization for long lists
+
+## Accessibility Standards
+
+1. **Semantic HTML**
+   - Use appropriate HTML elements for their intended purpose
+   - Implement proper heading hierarchy
+   - Use landmarks for major page sections
+
+2. **Keyboard Navigation**
+   - Ensure all interactive elements are keyboard accessible
+   - Implement logical tab order
+   - Provide visible focus indicators
+
+3. **ARIA Implementation**
+   - Use ARIA attributes to enhance accessibility
+   - Implement appropriate roles for custom components
+   - Ensure proper labeling of form elements and controls
+
+## Recent Improvements
+
+1. **SVG Illustrations**
+   - Replaced missing image references with inline SVGs
+   - Implemented consistent styling for SVG elements
+   - Added hover effects for interactive SVGs
+
+2. **Animation Fixes**
+   - Fixed wave animation to prevent vertical movement
+   - Optimized floating animations for better performance
+   - Ensured animations don't interfere with content readability
+
+3. **Responsive Enhancements**
+   - Improved mobile layout for feature cards
+   - Enhanced testimonial display on smaller screens
+   - Optimized footer layout for better mobile experience

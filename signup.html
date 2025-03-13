@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Mental Health Pattern Recognition Assistant</title>
+    <meta name="description" content="Sign up for MindPattern - the revolutionary mental health pattern recognition assistant that helps identify triggers and patterns without intensive tracking.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- External CDN resources -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/image-paths.css">
+    <!-- Fix CSS -->
+    <link rel="stylesheet" href="css/fixes.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>MindPattern</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="d-flex">
+                    <li><a href="features.html" class="nav-link">Features</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="investment.html" class="nav-link">Invest</a></li>
+                    <li><a href="donate.html" class="nav-link">Donate</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="signup.html" class="btn btn-primary active">Sign Up</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero bg-gradient-primary">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="text-light reveal">Start Your Mental Health Journey</h1>
+                <p class="hero-subtitle text-light reveal">Create your account and discover the patterns that impact your mental wellbeing.</p>
+            </div>
+        </div>
+        <div class="wave-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Signup Form Section -->
+    <section class="signup-form-section">
+        <div class="container">
+            <div class="signup-grid">
+                <div class="signup-form-container reveal">
+                    <div class="form-tabs">
+                        <button class="form-tab active" data-tab="signup">Sign Up</button>
+                        <button class="form-tab" data-tab="login">Log In</button>
+                    </div>
+                    
+                    <div class="tab-content" id="signup-tab">
+                        <h2>Create Your Account</h2>
+                        <form id="signup-form" class="signup-form">
+                            <div class="form-group">
+                                <label for="fullname" class="form-label">Full Name</label>
+                                <input type="text" id="fullname" name="fullname" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" id="password" name="password" class="form-control" required>
+                                <div class="password-strength">
+                                    <div class="strength-meter">
+                                        <div class="strength-segment"></div>
+                                        <div class="strength-segment"></div>
+                                        <div class="strength-segment"></div>
+                                        <div class="strength-segment"></div>
+                                    </div>
+                                    <span class="strength-text">Password strength</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirm-password" class="form-label">Confirm Password</label>
+                                <input type="password" id="confirm-password" name="confirm-password" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <label for="newsletter">I'd like to receive updates and newsletter (optional)</label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg w-100 magnetic-button">Create Account</button>
+                            
+                            <div class="social-signup">
+                                <p>Or sign up with:</p>
+                                <div class="social-buttons">
+                                    <button type="button" class="btn btn-social btn-google">
+                                        <img src="images/icon-google.svg" alt="Google">
+                                        Google
+                                    </button>
+                                    <button type="button" class="btn btn-social btn-apple">
+                                        <img src="images/icon-apple.svg" alt="Apple">
+                                        Apple
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="tab-content" id="login-tab" style="display: none;">
+                        <h2>Welcome Back</h2>
+                        <form id="login-form" class="login-form">
+                            <div class="form-group">
+                                <label for="login-email" class="form-label">Email Address</label>
+                                <input type="email" id="login-email" name="login-email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="login-password" class="form-label">Password</label>
+                                <input type="password" id="login-password" name="login-password" class="form-control" required>
+                                <a href="#" class="forgot-password">Forgot password?</a>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="remember" name="remember">
+                                    <label for="remember">Remember me</label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg w-100 magnetic-button">Log In</button>
+                            
+                            <div class="social-signup">
+                                <p>Or log in with:</p>
+                                <div class="social-buttons">
+                                    <button type="button" class="btn btn-social btn-google">
+                                        <img src="images/icon-google.svg" alt="Google">
+                                        Google
+                                    </button>
+                                    <button type="button" class="btn btn-social btn-apple">
+                                        <img src="images/icon-apple.svg" alt="Apple">
+                                        Apple
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="signup-benefits reveal">
+                    <h2>Benefits of Creating an Account</h2>
+                    <p>Join thousands of users who are improving their mental wellbeing with our pattern recognition technology.</p>
+                    
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <img src="images/icon-pattern.svg" alt="Pattern Recognition">
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Effortless Pattern Recognition</h3>
+                                <p>Identify mental health triggers and patterns without intensive manual tracking.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <img src="images/icon-insights.svg" alt="Personalized Insights">
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Personalized Insights</h3>
+                                <p>Receive tailored recommendations based on your unique mental health patterns.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <img src="images/icon-progress.svg" alt="Track Progress">
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Track Your Progress</h3>
+                                <p>Monitor your mental health journey with easy-to-understand visualizations.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <img src="images/icon-community.svg" alt="Community Support">
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Community Support</h3>
+                                <p>Connect with others on similar journeys through our supportive community.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"This app has been a game-changer for my mental health. It identified patterns I never would have noticed on my own, and the insights have been incredibly helpful."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="images/testimonial1.jpg" alt="Alex M." class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <h4>Alex M.</h4>
+                                <p>Premium user for 6 months</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plan Selection Section -->
+    <section class="plan-selection bg-light">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Choose Your Plan</h2>
+            <p class="section-subtitle text-center reveal">Select the plan that best fits your needs.</p>
+            
+            <div class="pricing-toggle reveal">
+                <span class="toggle-label">Monthly</span>
+                <label class="switch">
+                    <input type="checkbox" id="billing-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-label">Annual <span class="discount-badge">Save 20%</span></span>
+            </div>
+            
+            <div class="plan-grid">
+                <div class="plan-card reveal">
+                    <div class="plan-header">
+                        <h3>Basic</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">4.99</span>
+                            <span class="amount annual" style="display: none;">3.99</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-description">Essential pattern recognition for individuals starting their mental health journey.</p>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><span class="feature-check">✓</span> Basic pattern recognition</li>
+                            <li><span class="feature-check">✓</span> Daily mood tracking</li>
+                            <li><span class="feature-check">✓</span> Weekly insights report</li>
+                            <li><span class="feature-check">✓</span> Basic meditation exercises</li>
+                            <li><span class="feature-check">✓</span> Community forum access</li>
+                        </ul>
+                    </div>
+                    <div class="plan-cta">
+                        <button type="button" class="btn btn-outline btn-lg w-100 hover-lift plan-select" data-plan="basic">Select Basic</button>
+                    </div>
+                </div>
+                
+                <div class="plan-card popular reveal">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3>Premium</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">9.99</span>
+                            <span class="amount annual" style="display: none;">7.99</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-description">Advanced features for those serious about mental health improvement.</p>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><span class="feature-check">✓</span> Advanced pattern recognition</li>
+                            <li><span class="feature-check">✓</span> Comprehensive mood tracking</li>
+                            <li><span class="feature-check">✓</span> Daily insights and recommendations</li>
+                            <li><span class="feature-check">✓</span> Full meditation library</li>
+                            <li><span class="feature-check">✓</span> Community forum access</li>
+                            <li><span class="feature-check">✓</span> Advanced pattern analysis</li>
+                            <li><span class="feature-check">✓</span> Therapist sharing features</li>
+                        </ul>
+                    </div>
+                    <div class="plan-cta">
+                        <button type="button" class="btn btn-primary btn-lg w-100 magnetic-button plan-select" data-plan="premium">Select Premium</button>
+                    </div>
+                </div>
+                
+                <div class="plan-card reveal">
+                    <div class="plan-header">
+                        <h3>Ultimate</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">14.99</span>
+                            <span class="amount annual" style="display: none;">11.99</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-description">Complete mental health toolkit with premium features and support.</p>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><span class="feature-check">✓</span> Advanced pattern recognition</li>
+                            <li><span class="feature-check">✓</span> Comprehensive mood tracking</li>
+                            <li><span class="feature-check">✓</span> Real-time insights and alerts</li>
+                            <li><span class="feature-check">✓</span> Full meditation library</li>
+                            <li><span class="feature-check">✓</span> Community forum access</li>
+                            <li><span class="feature-check">✓</span> Advanced pattern analysis</li>
+                            <li><span class="feature-check">✓</span> Therapist sharing features</li>
+                            <li><span class="feature-check">✓</span> Premium guided exercises</li>
+                            <li><span class="feature-check">✓</span> Priority support</li>
+                        </ul>
+                    </div>
+                    <div class="plan-cta">
+                        <button type="button" class="btn btn-outline btn-lg w-100 hover-lift plan-select" data-plan="ultimate">Select Ultimate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section class="payment-section" style="display: none;">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Complete Your Registration</h2>
+            <p class="section-subtitle text-center reveal">Enter your payment details to start your subscription.</p>
+            
+            <div class="payment-container reveal">
+                <div class="payment-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-details">
+                        <div class="summary-plan">
+                            <span class="plan-name">Premium Plan</span>
+                            <span class="plan-price">$9.99/month</span>
+                        </div>
+                        <div class="summary-billing">
+                            <span class="billing-type">Monthly billing</span>
+                            <a href="#" class="change-plan">Change</a>
+                        </div>
+                        <div class="summary-trial">
+                            <span>14-day free trial</span>
+                        </div>
+                        <div class="summary-total">
+                            <span>Total due today</span>
+                            <span class="total-amount">$0.00</span>
+                        </div>
+                    </div>
+                    <div class="summary-note">
+                        <p>Your subscription will begin after your free trial ends. You won't be charged until then, and you can cancel anytime.</p>
+                    </div>
+                </div>
+                
+                <div class="payment-form-container">
+                    <form id="payment-form" class="payment-form">
+                        <h3>Payment Details</h3>
+                        
+                        <div class="payment-methods">
+                            <div class="payment-method-tabs">
+                                <button type="button" class="payment-tab active" data-method="card">Credit Card</button>
+                                <button type="button" class="payment-tab" data-method="paypal">PayPal</button>
+                                <button type="button" class="payment-tab" data-method="apple">Apple Pay</button>
+                            </div>
+                            
+                            <div class="payment-method-content" id="card-method">
+                                <div class="form-group">
+                                    <label for="card-number" class="form-label">Card Number</label>
+                                    <input type="text" id="card-number" name="card-number" class="form-control" placeholder="1234 5678 9012 3456" required>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiry-date" class="form-label">Expiry Date</label>
+                                        <input type="text" id="expiry-date" name="expiry-date" class="form-control" placeholder="MM/YY" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="cvv" class="form-label">CVV</label>
+                                        <input type="text" id="cvv" name="cvv" class="form-control" placeholder="123" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="card-name" class="form-label">Name on Card</label>
+                                    <input type="text" id="card-name" name="card-name" class="form-control" required>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-method-content" id="paypal-method" style="display: none;">
+                                <div class="paypal-info">
+                                    <p>You will be redirected to PayPal to complete your payment.</p>
+                                    <img src="images/paypal-logo.svg" alt="PayPal" class="paypal-logo">
+                                </div>
+                            </div>
+                            
+                            <div class="payment-method-content" id="apple-method" style="display: none;">
+                                <div class="apple-pay-info">
+                                    <p>Complete your purchase with Apple Pay.</p>
+                                    <img src="images/apple-pay-logo.svg" alt="Apple Pay" class="apple-pay-logo">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="terms-payment" name="terms-payment" required>
+                                <label for="terms-payment">I agree to the <a href="#">Terms of Service</a>, <a href="#">Privacy Policy</a>, and <a href="#">Subscription Terms</a></label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg w-100 magnetic-button">Start Free Trial</button>
+                        
+                        <div class="secure-payment">
+                            <img src="images/secure-payment.svg" alt="Secure Payment" class="secure-icon">
+                            <span>Your payment information is secure and encrypted</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Frequently Asked Questions</h2>
+            <p class="section-subtitle text-center reveal">Find answers to common questions about signing up.</p>
+            
+            <div class="faq-grid">
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>How does the free trial work?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All plans come with a 14-day free trial. You'll need to enter your payment information to start, but you won't be charged until the trial ends. You can cancel anytime during the trial period.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>Can I change my plan later?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can upgrade or downgrade your plan at any time from your account settings. Changes to your plan will take effect at the start of your next billing cycle.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>How do I cancel my subscription?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can cancel your subscription at any time from your account settings. If you cancel, you'll still have access to your plan until the end of your current billing period.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>Is my data secure?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we take data security very seriously. All your personal information and mental health data is encrypted and stored securely. We never share your individual data with third parties without your explicit consent.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>Can I use the app on multiple devices?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can access your account on any device by logging in with your email and password. Your data will sync automatically across all your devices.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>Do you offer discounts for students or healthcare workers?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer special pricing for students, educators, healthcare workers, and non-profit organizations. Please contact our support team with verification of your status to learn more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>MindPattern</h3>
+                    <p>Revolutionizing mental health tracking with AI-powered pattern recognition technology.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="icon-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="icon-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="icon-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="investment.html">Investors</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for the latest updates and insights.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 MindPattern. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Form tabs functionality
+            const formTabs = document.querySelectorAll('.form-tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            formTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    formTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+                    
+                    // Hide all tab contents
+                    tabContents.forEach(content => {
+                        content.style.display = 'none';
+                    });
+                    
+                    // Show the selected tab content
+                    const tabId = tab.getAttribute('data-tab');
+                    document.getElementById(`${tabId}-tab`).style.display = 'block';
+                });
+            });
+            
+            // Password strength meter
+            const passwordInput = document.getElementById('password');
+            const strengthSegments = document.querySelectorAll('.strength-segment');
+            const strengthText = document.querySelector('.strength-text');
+            
+            if (passwordInput) {
+                passwordInput.addEventListener('input', function() {
+                    const password = this.value;
+                    let strength = 0;
+                    
+                    if (password.length >= 8) strength++;
+                    if (password.match(/[A-Z]/)) strength++;
+                    if (password.match(/[0-9]/)) strength++;
+                    if (password.match(/[^A-Za-z0-9]/)) strength++;
+                    
+                    // Update strength meter
+                    strengthSegments.forEach((segment, index) => {
+                        if (index < strength) {
+                            segment.classList.add('active');
+                        } else {
+                            segment.classList.remove('active');
+                        }
+                    });
+                    
+                    // Update strength text
+                    const strengthLabels = ['Weak', 'Fair', 'Good', 'Strong'];
+                    strengthText.textContent = password.length > 0 ? strengthLabels[strength - 1] || 'Weak' : 'Password strength';
+                });
+            }
+            
+            // Plan selection
+            const planButtons = document.querySelectorAll('.plan-select');
+            const paymentSection = document.querySelector('.payment-section');
+            const planSelectionSection = document.querySelector('.plan-selection');
+            const summaryPlanName = document.querySelector('.plan-name');
+            const summaryPlanPrice = document.querySelector('.plan-price');
+            const billingToggle = document.getElementById('billing-toggle');
+            const monthlyAmounts = document.querySelectorAll('.amount.monthly');
+            const annualAmounts = document.querySelectorAll('.amount.annual');
+            const summaryBillingType = document.querySelector('.billing-type');
+            
+            if (planButtons.length > 0 && paymentSection) {
+                planButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        const plan = this.getAttribute('data-plan');
+                        let planName, planPrice;
+                        
+                        // Set plan name and price based on selection
+                        switch(plan) {
+                            case 'basic':
+                                planName = 'Basic Plan';
+                                planPrice = billingToggle && billingToggle.checked ? '$3.99/month' : '$4.99/month';
+                                break;
+                            case 'premium':
+                                planName = 'Premium Plan';
+                                planPrice = billingToggle && billingToggle.checked ? '$7.99/month' : '$9.99/month';
+                                break;
+                            case 'ultimate':
+                                planName = 'Ultimate Plan';
+                                planPrice = billingToggle && billingToggle.checked ? '$11.99/month' : '$14.99/month';
+                                break;
+                        }
+                        
+                        // Update summary
+                        if (summaryPlanName) summaryPlanName.textContent = planName;
+                        if (summaryPlanPrice) summaryPlanPrice.textContent = planPrice;
+                        if (summaryBillingType) {
+                            summaryBillingType.textContent = billingToggle && billingToggle.checked ? 'Annual billing' : 'Monthly billing';
+                        }
+                        
+                        // Show payment section, hide plan selection
+                        paymentSection.style.display = 'block';
+                        planSelectionSection.style.display = 'none';
+                        
+                        // Scroll to payment section
+                        paymentSection.scrollIntoView({ behavior: 'smooth' });
+                    });
+                });
+            }
+            
+            // Billing toggle functionality
+            if (billingToggle) {
+                billingToggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        // Annual billing
+                        monthlyAmounts.forEach(el => el.style.display = 'none');
+                        annualAmounts.forEach(el => el.style.display = 'inline');
+                    } else {
+                        // Monthly billing
+                        monthlyAmounts.forEach(el => el.style.display = 'inline');
+                        annualAmounts.forEach(el => el.style.display = 'none');
+                    }
+                });
+            }
+            
+            // Change plan link
+            const changePlanLink = document.querySelector('.change-plan');
+            if (changePlanLink) {
+                changePlanLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Hide payment section, show plan selection
+                    paymentSection.style.display = 'none';
+                    planSelectionSection.style.display = 'block';
+                    
+                    // Scroll to plan selection
+                    planSelectionSection.scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+            
+            // Payment method tabs
+            const paymentTabs = document.querySelectorAll('.payment-tab');
+            const paymentContents = document.querySelectorAll('.payment-method-content');
+            
+            paymentTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    paymentTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+                    
+                    // Hide all payment method contents
+                    paymentContents.forEach(content => {
+                        content.style.display = 'none';
+                    });
+                    
+                    // Show the selected payment method content
+                    const method = tab.getAttribute('data-method');
+                    document.getElementById(`${method}-method`).style.display = 'block';
+                });
+            });
+            
+            // Form submissions
+            const signupForm = document.getElementById('signup-form');
+            const loginForm = document.getElementById('login-form');
+            const paymentForm = document.getElementById('payment-form');
+            
+            if (signupForm) {
+                signupForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // In a real implementation, this would validate and submit the form data
+                    
+                    // Show plan selection section
+                    planSelectionSection.scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+            
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // In a real implementation, this would authenticate the user
+                    alert('Login functionality would be implemented in the production version.');
+                });
+            }
+            
+            if (paymentForm) {
+                paymentForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // In a real implementation, this would process the payment
+                    
+                    // Simulate form submission
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Processing...';
+                    
+                    setTimeout(() => {
+                        // Create success message
+                        const successMessage = document.createElement('div');
+                        successMessage.className = 'form-success';
+                        successMessage.innerHTML = '<h3>Welcome to MindPattern!</h3><p>Your free trial has started. You\'ll receive a confirmation email with details on how to get started.</p><a href="index.html" class="btn btn-primary btn-lg">Go to Dashboard</a>';
+                        
+                        // Replace form with success message
+                        this.style.display = 'none';
+                        this.parentNode.appendChild(successMessage);
+                    }, 1500);
+                });
+            }
+            
+            // FAQ toggle functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                    const toggle = question.querySelector('.faq-toggle');
+                    toggle.textContent = item.classList.contains('active') ? '−' : '+';
+                });
+            });
+        });
+    </script>
+    <script src="js/image-fix.js"></script>
+    <script src="js/svg-fix.js"></script>
+</body>
+</html>

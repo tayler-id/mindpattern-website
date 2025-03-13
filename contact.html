@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Mental Health Pattern Recognition Assistant</title>
+    <meta name="description" content="Get in touch with our team. We're here to answer your questions about our Mental Health Pattern Recognition Assistant.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- External CDN resources -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/image-paths.css">
+    <!-- Fix CSS -->
+    <link rel="stylesheet" href="css/fixes.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>MindPattern</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="d-flex">
+                    <li><a href="features.html" class="nav-link">Features</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="investment.html" class="nav-link">Invest</a></li>
+                    <li><a href="donate.html" class="nav-link">Donate</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    <li><a href="signup.html" class="btn btn-primary">Sign Up</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero bg-gradient-primary">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="text-light reveal">Get in Touch</h1>
+                <p class="hero-subtitle text-light reveal">We're here to answer your questions and help you on your mental health journey.</p>
+            </div>
+        </div>
+        <div class="wave-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <h2>Contact Information</h2>
+                    <p>Have questions about our app or need assistance? Reach out to us using the form or through our contact information below.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <img src="images/icon-email.svg" alt="Email Icon">
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email Us</h3>
+                                <p><a href="mailto:support@mindpattern.com">support@mindpattern.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <img src="images/icon-phone.svg" alt="Phone Icon">
+                            </div>
+                            <div class="contact-details">
+                                <h3>Call Us</h3>
+                                <p><a href="tel:+18005551234">+1 (800) 555-1234</a></p>
+                                <p class="text-muted">Monday-Friday, 9am-5pm EST</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <img src="images/icon-location.svg" alt="Location Icon">
+                            </div>
+                            <div class="contact-details">
+                                <h3>Visit Us</h3>
+                                <p>123 Innovation Way<br>Tech District<br>San Francisco, CA 94107</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-contact">
+                        <h3>Connect With Us</h3>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook" class="hover-lift"><i class="icon-facebook"></i></a>
+                            <a href="#" aria-label="Twitter" class="hover-lift"><i class="icon-twitter"></i></a>
+                            <a href="#" aria-label="Instagram" class="hover-lift"><i class="icon-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn" class="hover-lift"><i class="icon-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container reveal">
+                    <h2>Send Us a Message</h2>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <select id="subject" name="subject" class="form-control" required>
+                                <option value="" selected disabled>Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="billing">Billing Question</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <label for="privacy">I agree to the <a href="#">Privacy Policy</a> and consent to the processing of my data.</label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg magnetic-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Find Us</h2>
+            <div class="map-container reveal">
+                <!-- In a real implementation, this would be an interactive map -->
+                <img src="images/map.jpg" alt="Office Location Map" class="map-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Frequently Asked Questions</h2>
+            <p class="section-subtitle text-center reveal">Quick answers to common questions.</p>
+            
+            <div class="faq-grid">
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>How quickly can I expect a response?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We typically respond to all inquiries within 24 business hours. For urgent matters, please call our support line.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>Do you offer technical support on weekends?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, our technical support team is available on weekends from 10am to 4pm EST for urgent issues. Regular inquiries will be addressed on the next business day.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>Can I schedule a demo of the app?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! You can schedule a personalized demo by selecting "Partnership Opportunity" in the contact form subject line and mentioning your interest in a demo.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>How can I provide feedback about the app?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We value your feedback! You can use the contact form above and select "Feedback" as the subject, or email us directly at feedback@mindpattern.com.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Options Section -->
+    <section class="support-options">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Additional Support Options</h2>
+            <p class="section-subtitle text-center reveal">Find the right support channel for your needs.</p>
+            
+            <div class="support-grid">
+                <div class="support-card interactive-card reveal">
+                    <div class="support-icon">
+                        <img src="images/icon-help.svg" alt="Help Center Icon">
+                    </div>
+                    <h3>Help Center</h3>
+                    <p>Browse our comprehensive knowledge base for tutorials, guides, and troubleshooting tips.</p>
+                    <a href="#" class="btn btn-outline">Visit Help Center</a>
+                </div>
+                
+                <div class="support-card interactive-card reveal">
+                    <div class="support-icon">
+                        <img src="images/icon-community.svg" alt="Community Forum Icon">
+                    </div>
+                    <h3>Community Forum</h3>
+                    <p>Connect with other users, share experiences, and get advice from our community.</p>
+                    <a href="#" class="btn btn-outline">Join Discussion</a>
+                </div>
+                
+                <div class="support-card interactive-card reveal">
+                    <div class="support-icon">
+                        <img src="images/icon-chat.svg" alt="Live Chat Icon">
+                    </div>
+                    <h3>Live Chat</h3>
+                    <p>Get immediate assistance from our support team during business hours.</p>
+                    <a href="#" class="btn btn-outline">Start Chat</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2>Ready to Transform Your Mental Health Journey?</h2>
+                <p>Join thousands of users who are improving their mental wellbeing with our pattern recognition technology.</p>
+                <div class="cta-buttons">
+                    <a href="signup.html" class="btn btn-primary btn-lg magnetic-button">Sign Up Now</a>
+                    <a href="features.html" class="btn btn-outline btn-lg">Explore Features</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>MindPattern</h3>
+                    <p>Revolutionizing mental health tracking with AI-powered pattern recognition technology.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="icon-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="icon-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="icon-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="investment.html">Investors</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for the latest updates and insights.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 MindPattern. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Contact form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // In a real implementation, this would send the form data to a server
+                    // For now, we'll just show a success message
+                    
+                    // Simulate form submission
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Sending...';
+                    
+                    setTimeout(() => {
+                        // Create success message
+                        const successMessage = document.createElement('div');
+                        successMessage.className = 'form-success';
+                        successMessage.innerHTML = '<h3>Thank you for your message!</h3><p>We\'ve received your inquiry and will get back to you within 24 hours.</p>';
+                        
+                        // Replace form with success message
+                        this.style.display = 'none';
+                        this.parentNode.appendChild(successMessage);
+                        
+                        // Reset form (hidden but reset for if we want to show it again)
+                        this.reset();
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Send Message';
+                    }, 1500);
+                });
+            }
+            
+            // FAQ toggle functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                    const toggle = question.querySelector('.faq-toggle');
+                    toggle.textContent = item.classList.contains('active') ? '−' : '+';
+                });
+            });
+        });
+    </script>
+    <script src="js/image-fix.js"></script>
+    <script src="js/svg-fix.js"></script>
+</body>
+</html>
