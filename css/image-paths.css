@@ -1,65 +1,100 @@
+/* Updated image paths to use relative URLs and SVG placeholders */
+
+/* Import fonts and icons */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css');
+
+/* Hero image */
 .hero-image {
-  background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-image: url('../images/hero-illustration.svg');
   background-size: cover;
   background-position: center;
 }
 
-.testimonial-image-1 {
-  background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
+/* Testimonial images */
+.testimonial-image-1, .testimonial-image-2, .testimonial-image-3,
+.testimonial-avatar, .author-avatar, img.testimonial-avatar {
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
 }
 
-.testimonial-image-2 {
-  background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
+/* Feature images */
+.feature-image-1, .feature-image-2, .feature-image-3 {
+  background-size: cover;
+  background-position: center;
 }
 
-.testimonial-image-3 {
-  background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
+/* Blog images */
+.blog-image-1, .blog-image-2, .blog-image-3 {
+  background-size: cover;
+  background-position: center;
 }
 
-.feature-image-1 {
-  background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+/* Icon styles */
+.icon, .feature-icon, .benefit-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: var(--primary-color, #6366F1);
 }
 
-.feature-image-2 {
-  background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-}
-
-.feature-image-3 {
-  background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-}
-
-.blog-image-1 {
-  background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-}
-
-.blog-image-2 {
-  background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-}
-
-.blog-image-3 {
-  background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-}
-
-.icon-pattern {
-  background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/icons/activity.svg');
-}
-
-.icon-brain {
-  background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/icons/brain.svg');
-}
-
-.icon-chart {
-  background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/icons/graph-up.svg');
-}
-
-.icon-shield {
-  background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/icons/shield-check.svg');
-}
-
+/* Logo image */
 .logo-image {
-  background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/icons/activity.svg');
+  display: inline-block;
+  width: 32px;
+  height: 32px;
 }
 
-/* Add CDN references for fonts and icons */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
-@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css');
+/* Placeholder image styles */
+.placeholder-image {
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.placeholder-image:hover {
+  transform: scale(1.05);
+}
+
+.testimonial-avatar .placeholder-image,
+.author-avatar .placeholder-image {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+/* Fix for absolute URLs */
+[src^="https://mindpattern.ai/"] {
+  position: relative;
+}
+
+[src^="https://mindpattern.ai/"]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(99, 102, 241, 0.1);
+  border-radius: 4px;
+}
+
+/* SVG background patterns */
+.pattern-bg {
+  background-image: url('../images/icons/icon-pattern.svg');
+  background-repeat: repeat;
+  background-size: 200px;
+  opacity: 0.05;
+}
+
+/* Enterprise and guarantee images */
+.enterprise-image img, .guarantee-icon img {
+  max-width: 100%;
+  height: auto;
+}

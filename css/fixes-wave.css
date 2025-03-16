@@ -1,0 +1,47 @@
+/* Wave Animation REMOVED */
+
+/* Remove footer wave completely */
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  margin-top: 40px; /* Add some space above footer */
+  background-color: #2d2d2d;
+}
+
+/* Remove the wave before element */
+.site-footer::before {
+  display: none;
+}
+
+/* Remove hero wave effect */
+.hero-section .wave-bottom {
+  display: none;
+}
+
+/* Fix for pages with light-colored text right above footer */
+.cta-section, 
+.newsletter-section,
+.contact-section {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 40px; /* Add some space at bottom */
+  margin-bottom: 0; /* Reset margin */
+}
+
+/* Hide all wave elements */
+body [class*="-wave"], 
+body [class*="wave-"] {
+  display: none;
+}
+
+/* Ensure footer has proper spacing */
+.footer-grid {
+  padding-top: 40px;
+}
+
+.footer-grid, 
+.footer-bottom {
+  position: relative;
+  z-index: 10;
+  color: #ffffff; /* Ensure footer text is white */
+}

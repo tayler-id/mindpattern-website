@@ -1,0 +1,100 @@
+/* Testimonials styles for Mental Health Pattern Recognition Assistant Website */
+
+.testimonials-section {
+  padding: 5rem 0;
+  background-color: #fff;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.testimonial-card {
+  display: flex;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 1.5rem;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-image {
+  flex-shrink: 0;
+}
+
+.testimonial-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f0ebff;
+}
+
+.testimonial-content {
+  flex: 1;
+}
+
+.testimonial-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--neutral-700);
+  font-style: italic;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-content p::before {
+  content: '"';
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--primary-light);
+  opacity: 0.3;
+  position: absolute;
+  top: -1rem;
+  left: -0.5rem;
+  z-index: -1;
+}
+
+.testimonial-author h4 {
+  margin-bottom: 0.25rem;
+  color: var(--neutral-900);
+  font-weight: 600;
+}
+
+.testimonial-author p {
+  color: var(--neutral-500);
+  font-size: 0.875rem;
+  margin: 0;
+  font-style: normal;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonial-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .testimonial-image {
+    margin-bottom: 1.5rem;
+  }
+  
+  .testimonial-content p::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -1,4 +1,432 @@
-/* Fixes for MindPattern Website */
+/* MindPattern Website Bug Fixes */
+/* Updated: 2025-03-15 */
+
+/* === WAVE ANIMATION REMOVED === */
+
+/* Remove footer wave completely */
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  margin-top: 40px; /* Add some space above footer */
+  background-color: #2d2d2d;
+}
+
+
+
+
+
+/* Fix for pages with light-colored text right above footer */
+.cta-section, 
+.newsletter-section,
+.contact-section {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 40px; /* Add some space at bottom */
+  margin-bottom: 0; /* Reset margin */
+}
+
+
+
+/* Ensure footer has proper spacing */
+.footer-grid {
+  padding-top: 40px;
+}
+
+.footer-grid, 
+.footer-bottom {
+  position: relative;
+  z-index: 10;
+  color: #ffffff; /* Ensure footer text is white */
+}
+
+/* === TYPOGRAPHY AND CONTRAST FIXES === */
+
+/* Improve hero section text contrast */
+.hero-section h1,
+.hero-section .hero-subtitle {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+
+.hero-section .hero-subtitle {
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+/* Fix testimonial text overlay readability */
+.testimonial-card {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+}
+
+.testimonial-content p {
+  color: #333333;
+  font-weight: 500;
+}
+
+.testimonial-author h4 {
+  color: #6366F1;
+  font-weight: 600;
+}
+
+.testimonial-author p {
+  color: #6c757d;
+}
+
+/* Fix feature cards title contrast */
+.feature-card h3 {
+  color: #333333;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature-card p {
+  color: #555555;
+}
+
+/* Consistent font weights across sections */
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 400;
+}
+
+.btn {
+  font-weight: 500;
+}
+
+/* Fix overlay problems for hover states */
+.feature-card {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.1s ease;
+}
+
+.feature-card:hover {
+  z-index: 2;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Fix testimonial slider controls */
+.testimonial-controls {
+  position: relative;
+  z-index: 10;
+}
+
+.testimonial-prev,
+.testimonial-next {
+  position: relative;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.testimonial-prev:hover,
+.testimonial-next:hover {
+  background-color: white;
+}
+
+/* Fix newsletter form focus state */
+.newsletter-form input:focus {
+  z-index: 2;
+  position: relative;
+  border-color: #6366F1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+.newsletter-form button {
+  position: relative;
+  z-index: 1;
+}
+
+/* Fix modal overlays */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  position: relative;
+  z-index: 1001;
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Fix clickable areas */
+.btn, .feature-card, .testimonial-card, .nav-link {
+  position: relative;
+}
+
+.btn::after, 
+.feature-card::after, 
+.testimonial-card::after, 
+.nav-link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* === RESPONSIVE BEHAVIOR FIXES === */
+
+/* Fix footer grid on mobile */
+@media (max-width: 767px) {
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-about,
+  .footer-links,
+  .footer-newsletter {
+    width: 100%;
+  }
+  
+  .footer-newsletter form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-newsletter button {
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+
+/* Fix hero SVG scaling */
+@media (max-width: 991px) {
+  .hero-image svg {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .hero-content {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  .hero-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .hero-section {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+}
+
+/* Fix testimonial cards overlap on tablet */
+@media (max-width: 991px) and (min-width: 768px) {
+  .testimonials-slider {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .testimonial-card {
+    margin: 0 auto;
+    max-width: 500px;
+  }
+}
+
+/* Fix testimonial slider navigation */
+.testimonial-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.testimonial-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.testimonial-prev,
+.testimonial-next {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.testimonial-prev::before,
+.testimonial-next::before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+}
+
+.testimonial-prev::before {
+  transform: rotate(-45deg);
+}
+
+.testimonial-next::before {
+  transform: rotate(135deg);
+}
+
+/* Fix mobile menu */
+@media (max-width: 767px) {
+  .mobile-menu-toggle {
+    display: block;
+    position: relative;
+    z-index: 101;
+  }
+  
+  .site-header .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: white;
+    z-index: 100;
+    transition: right 0.3s ease;
+    padding: 80px 20px 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .site-header .main-nav.active {
+    right: 0;
+  }
+  
+  .site-header .main-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .site-header .main-nav ul li {
+    margin: 10px 0;
+    width: 100%;
+  }
+  
+  .site-header .main-nav ul li a {
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+  }
+}
+
+/* Fix statistics section alignment */
+@media (max-width: 767px) {
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .stat-card {
+    text-align: center;
+    padding: 1.5rem;
+  }
+}
+
+/* Fix form validation errors visibility */
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.validation-message {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+input.invalid,
+textarea.invalid,
+select.invalid {
+  border-color: #dc3545;
+}
+
+input.invalid:focus,
+textarea.invalid:focus,
+select.invalid:focus {
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+/* Fix magnetic button effect */
+.magnetic-button {
+  position: relative;
+  display: inline-block;
+  transform-style: preserve-3d;
+  transform: perspective(500px);
+  transition: transform 0.2s;
+}
+
+.magnetic-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.2s;
+  border-radius: inherit;
+}
+
+.magnetic-button:hover::after {
+  opacity: 1;
+}
+
+/* === ADDITIONAL FIXES === */
 
 /* Fix mobile menu toggle delay */
 .mobile-menu-toggle {
@@ -10,122 +438,6 @@
   transform: translateZ(0);
   backface-visibility: hidden;
   perspective: 1000px;
-}
-
-/* Fix testimonial slider dots misalignment */
-.testimonial-dots {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 var(--spacing-4);
-  position: relative;
-  z-index: 2;
-}
-
-/* Fix wave animation in footer */
-.wave-animation {
-  position: absolute;
-  top: -100px;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  overflow: hidden;
-  transform: translateZ(0);
-}
-
-.wave-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 100%;
-  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"><path d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18.17 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z" fill="%23111827" opacity=".25"/></svg>') repeat-x;
-  animation: wave 25s linear infinite;
-  transform: translateY(0);
-}
-
-/* Fix statistics counter triggering multiple times */
-.counter.counted {
-  animation: none;
-}
-
-/* Fix form submission showing success message before completion */
-.form-success {
-  display: none;
-  background-color: #10B981;
-  color: white;
-  padding: 12px;
-  border-radius: 5px;
-  margin-top: 16px;
-  text-align: center;
-}
-
-.form-success.active {
-  display: block;
-}
-
-/* Fix newsletter signup validation message positioning */
-.newsletter-form {
-  position: relative;
-}
-
-.newsletter-form .validation-message {
-  position: absolute;
-  bottom: -25px;
-  left: 0;
-  font-size: 14px;
-  color: #EF4444;
-}
-
-/* Fix social media links */
-.social-links a {
-  color: white;
-  text-decoration: none;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.social-links a:hover {
-  transform: translateY(-3px);
-  background-color: #6366F1;
-}
-
-/* Fix responsive issues */
-@media (max-width: 768px) {
-  .hero-content {
-    text-align: center;
-    margin: 0 auto;
-  }
-  
-  .hero-cta {
-    justify-content: center;
-  }
-  
-  .hero-image {
-    position: relative;
-    top: auto;
-    right: auto;
-    transform: none;
-    width: 80%;
-    margin: 32px auto 0;
-  }
-  
-  .cta-buttons {
-    flex-direction: column;
-    gap: 12px;
-  }
-}
-
-/* Fix image paths */
-.hero-image {
-  background-image: none;
-}
-
-.testimonial-avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 12px;
-  background-color: #e9ecef;
 }
 
 /* Fix SVG icons */
@@ -141,6 +453,84 @@
 .icon-brain, .icon-pattern, .icon-chart, .icon-shield {
   width: 48px;
   height: 48px;
+}
+
+/* Fix counter triggering multiple times */
+.counter.counted {
+  animation: none;
+}
+
+/* Add CDN references for fonts and icons */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+textarea.invalid,
+select.invalid {
+  border-color: #dc3545;
+}
+
+input.invalid:focus,
+textarea.invalid:focus,
+select.invalid:focus {
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+/* Fix magnetic button effect */
+.magnetic-button {
+  position: relative;
+  display: inline-block;
+  transform-style: preserve-3d;
+  transform: perspective(500px);
+  transition: transform 0.2s;
+}
+
+.magnetic-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.2s;
+  border-radius: inherit;
+}
+
+.magnetic-button:hover::after {
+  opacity: 1;
+}
+
+/* === ADDITIONAL FIXES === */
+
+/* Fix mobile menu toggle delay */
+.mobile-menu-toggle {
+  transition-delay: 0ms;
+}
+
+/* Fix hero animation flickering in Safari */
+.hero-image svg {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Fix SVG icons */
+.icon-brain, .icon-pattern, .icon-chart, .icon-shield, .icon-user, .icon-check, .icon-arrow-right {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.icon-brain, .icon-pattern, .icon-chart, .icon-shield {
+  width: 48px;
+  height: 48px;
+}
+
+/* Fix counter triggering multiple times */
+.counter.counted {
+  animation: none;
 }
 
 /* Add CDN references for fonts and icons */

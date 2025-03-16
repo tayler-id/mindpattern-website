@@ -67,9 +67,15 @@
    - Optimize image file sizes without sacrificing quality
 
 3. **Placeholder Strategy**
-   - Use lightweight placeholder images during loading
-   - Implement progressive loading for large images
+   - Use SVG placeholders for missing or broken images
+   - Implement context-aware placeholders based on image type (testimonial, feature, blog, etc.)
    - Use appropriate alt text for all images
+   - Apply consistent styling to placeholder images for visual coherence
+
+4. **Image Error Handling**
+   - Implement error event listeners to catch and handle image loading failures
+   - Provide appropriate fallback content when images fail to load
+   - Log image loading failures for debugging and monitoring
 
 ## Performance Considerations
 
@@ -90,6 +96,38 @@
    - Use CSS containment where appropriate
    - Implement virtualization for long lists
 
+## MCP Server Organization
+
+1. **Directory Structure**
+   - All MCP servers stored in `D:\MCP\`
+   - Each server in its own subdirectory
+   - Standardized naming convention: descriptive-name-mcp
+
+2. **Automation Scripts**
+   - `create-mcp-server.ps1`: Creates new MCP servers
+   - `migrate-mcp-servers.ps1`: Migrates existing servers to the standard location
+   - `manage-mcp-servers.ps1`: Lists, enables, disables, and updates servers
+   - `sync-marketplace-servers.ps1`: Handles servers installed from the Cline marketplace
+   - `test-mcp-tools.ps1`: Demonstrates how to use the management tools
+
+3. **Configuration Management**
+   - Configuration file at `C:\Users\ramsa\AppData\Roaming\Code\User\globalStorage\saoudrizwan.claude-dev\settings\cline_mcp_settings.json`
+   - Server paths standardized to `D:\MCP\server-name\build\index.js`
+   - Environment variables stored in configuration file
+
+4. **Marketplace Integration**
+   - Marketplace servers detected based on command and arguments
+   - Wrapper scripts created for marketplace servers
+   - Configuration updated to use wrapper scripts
+   - Automatic synchronization via PowerShell profile and scheduled task
+
+5. **Fully Automated Solution**
+   - PowerShell profile automatically synchronizes MCP servers on startup
+   - VS Code settings configured to install all MCP servers to D:\MCP by default
+   - Daily scheduled task ensures all servers are properly organized
+   - No manual intervention required for MCP server management
+   - Documentation in README-AUTOMATION.md explains the automated setup
+
 ## Accessibility Standards
 
 1. **Semantic HTML**
@@ -107,12 +145,42 @@
    - Implement appropriate roles for custom components
    - Ensure proper labeling of form elements and controls
 
+## AI Image Generation with EverArt Forge MCP
+
+1. **Generation Approach**
+   - Use consistent prompting patterns for similar image types
+   - Include brand colors (#6366F1 purple to #EC4899 pink) in prompts
+   - Use Recraft-Vector (8000) model for all vector graphics and icons
+   - Use Recraft-Real (7000) model for photorealistic images like avatars
+   - Maintain consistent art direction across all generated images
+
+2. **Prompt Optimization**
+   - Be specific about style ("minimalist", "clean lines", "modern")
+   - Include color information directly in prompts
+   - Reference the mental health context in all prompts
+   - When applicable, mention "vector" for SVG outputs
+   - Store all finalized prompts in memory-bank/image-generation-plan.md
+
+3. **Implementation Workflow**
+   - Generate images with detailed prompts
+   - Review for quality and alignment with brand identity
+   - Implement in HTML with proper fallbacks
+   - Always include appropriate alt text
+   - Maintain SVG placeholders as fallback strategy
+
+4. **Output Paths**
+   - Testimonial avatars: images/testimonials/
+   - Feature icons: images/icons/
+   - Brand elements: images/ (root directory)
+   - Store image outputs in appropriate directories based on type
+
 ## Recent Improvements
 
 1. **SVG Illustrations**
    - Replaced missing image references with inline SVGs
    - Implemented consistent styling for SVG elements
    - Added hover effects for interactive SVGs
+   - Created comprehensive plan for replacing SVGs with AI-generated images
 
 2. **Animation Fixes**
    - Fixed wave animation to prevent vertical movement
@@ -123,3 +191,9 @@
    - Improved mobile layout for feature cards
    - Enhanced testimonial display on smaller screens
    - Optimized footer layout for better mobile experience
+
+4. **Image Handling Improvements**
+   - Enhanced image-fix.js to handle all missing images with appropriate SVG placeholders
+   - Implemented context-aware placeholders for different image types (testimonials, features, etc.)
+   - Added error event listeners to catch and handle image loading failures
+   - Improved styling for placeholder images with consistent dimensions and styling

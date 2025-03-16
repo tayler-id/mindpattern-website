@@ -576,13 +576,43 @@
   width: 100%;
   overflow: hidden;
   line-height: 0;
+  z-index: 1;
+  transform: translateZ(0); /* Hardware acceleration */
 }
 
 .wave-bottom svg {
   position: relative;
   display: block;
-  width: calc(100% + 1.3px);
-  height: 70px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  min-width: 1000px; /* Ensure minimum width */
+  transform: translateY(0); /* Prevent vertical movement */
+}
+
+/* Additional responsive adjustments for wave */
+@media (max-width: 1200px) {
+  .wave-bottom svg {
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wave-bottom {
+    bottom: -1px; /* Ensure no gap at the bottom on mobile */
+  }
+  
+  .wave-bottom svg {
+    min-width: 500px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wave-bottom svg {
+    min-width: 400px;
+    height: 50px;
+  }
 }
 
 /* Fix background gradients */
