@@ -5,25 +5,63 @@ document.addEventListener('DOMContentLoaded', function() {
   const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
   const mainNav = document.querySelector('.main-nav');
   
-  if (mobileMenuToggle && mainNav) {
-    mobileMenuToggle.addEventListener('click', function() {
-      // Fix: Add a small delay to prevent animation lag
-      setTimeout(() => {
-        this.classList.toggle('active');
-        mainNav.classList.toggle('active');
+  // Mobile breakpoint should match CSS media query
+  const mobileBreakpoint = 768;
+  
+  // Function to check viewport and adjust element states accordingly
+  function checkViewportSize() {
+    const windowWidth = window.innerWidth;
+    
+    if (windowWidth <= mobileBreakpoint) {
+      // Mobile view
+      if (mobileMenuToggle) mobileMenuToggle.style.display = 'block';
+      if (mainNav) mainNav.style.display = ''; // Let CSS control display based on active state
+    } else {
+      // Desktop view
+      if (mobileMenuToggle) mobileMenuToggle.style.display = 'none';
+      if (mainNav) mainNav.style.display = 'block';
+      
+      // Reset active states when returning to desktop
+      if (mobileMenuToggle && mobileMenuToggle.classList.contains('active')) {
+        mobileMenuToggle.classList.remove('active');
+        mainNav.classList.remove('active');
         
-        // Toggle menu icon
-        const spans = this.querySelectorAll('span');
-        if (this.classList.contains('active')) {
-          spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-          spans[1].style.opacity = '0';
-          spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
-        } else {
-          spans[0].style.transform = 'none';
-          spans[1].style.opacity = '1';
-          spans[2].style.transform = 'none';
-        }
-      }, 10);
+        // Reset hamburger icon
+        const spans = mobileMenuToggle.querySelectorAll('span');
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+      }
+    }
+  }
+  
+  if (mobileMenuToggle && mainNav) {
+    // Run the check on page load
+    checkViewportSize();
+    
+    // Set up resize event handler
+    window.addEventListener('resize', function() {
+      // Using requestAnimationFrame to throttle and improve performance
+      requestAnimationFrame(checkViewportSize);
+    });
+    
+    // Mobile menu toggle click handler
+    mobileMenuToggle.addEventListener('click', function() {
+      // First toggle the classes immediately, then animate
+      this.classList.toggle('active');
+      mainNav.classList.toggle('active');
+      
+      // Toggle menu icon
+      const spans = this.querySelectorAll('span');
+      if (this.classList.contains('active')) {
+        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+      } else {
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+      }
     });
   }
   
@@ -276,12 +314,35 @@ document.addEventListener('DOMContentLoaded', function() {
     const windowHeight = window.innerHeight;
     const revealPoint = 150;
     
-    revealElements.forEach(element => {
-      const elementTop = element.getBoundingClientRect().top;
-      
-      if (elementTop < windowHeight - revealPoint) {
-        element.classList.add('active');
+    // Store elements in view to reveal them in sequence
+    const elementsToReveal = [];
+    
+    revealElements.forEach((element, index) => {
+      // Only process elements that haven't been revealed yet
+      if (!element.classList.contains('active')) {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementRect = element.getBoundingClientRect();
+        
+        // Check if element is in view
+        if (elementTop < windowHeight - revealPoint) {
+          elementsToReveal.push({
+            element: element,
+            index: index,
+            top: elementTop,
+            height: elementRect.height
+          });
+        }
       }
+    });
+    
+    // Sort elements by vertical position (top to bottom)
+    elementsToReveal.sort((a, b) => a.top - b.top);
+    
+    // Reveal elements with increased delay for further down elements
+    elementsToReveal.forEach((item, index) => {
+      setTimeout(() => {
+        item.element.classList.add('active');
+      }, index * 150); // Increased to 150ms delay between each element
     });
   }
   

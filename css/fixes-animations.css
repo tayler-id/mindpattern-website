@@ -1,0 +1,134 @@
+/* Animation fixes for vertical rhythm */
+
+/* Basic reveal animation improvements */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px); /* Increased from 20px to 60px for more dramatic offset */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Slowed down transition */
+  will-change: opacity, transform;
+  position: relative; /* Ensure positioning context */
+  z-index: 1; /* Base z-index */
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 2; /* Higher z-index when active */
+}
+
+/* Ensure feature cards on index page have proper slide-up animation */
+.features-preview .feature-card.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.features-preview .feature-card.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add staggered delays to index feature cards specifically */
+.features-preview .feature-card.reveal:nth-child(1) { transition-delay: 0.1s; }
+.features-preview .feature-card.reveal:nth-child(2) { transition-delay: 0.2s; }
+.features-preview .feature-card.reveal:nth-child(3) { transition-delay: 0.3s; }
+.features-preview .feature-card.reveal:nth-child(4) { transition-delay: 0.4s; }
+
+/* Add staggered delays to feature cards for smoother animations */
+.features-grid .feature-card.reveal:nth-child(1) { transition-delay: 0.1s; }
+.features-grid .feature-card.reveal:nth-child(2) { transition-delay: 0.2s; }
+.features-grid .feature-card.reveal:nth-child(3) { transition-delay: 0.3s; }
+.features-grid .feature-card.reveal:nth-child(4) { transition-delay: 0.4s; }
+.features-grid .feature-card.reveal:nth-child(5) { transition-delay: 0.5s; }
+.features-grid .feature-card.reveal:nth-child(6) { transition-delay: 0.6s; }
+
+/* Fix feature card height and spacing during animations */
+.feature-card {
+  height: 100%; /* Ensure consistent height */
+  min-height: 220px; /* Reduced back to smaller size */
+  /*margin-bottom: 90px;  Even more spacing between cards (outside the card) */
+  display: flex;
+  flex-direction: column;
+  transform: translateY(0); /* Reset any transform */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* Ensure proper stacking context */
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  z-index: 2; /* Increased z-index to ensure hover state appears above other cards */
+}
+
+/* Additional bottom margin (not padding) for interactive cards */
+.interactive-card {
+ /*margin-bottom: 100px !important; /* Force extra margin for interactive cards */
+}
+
+/* Fix for feature grid spacing */
+.features-grid {
+  gap: 50px; /* Increased gap between grid items */
+  margin-bottom: 60px; /* Increased bottom margin */
+  position: relative; /* Create new stacking context */
+}
+
+/* Ensure proper spacing in the feature item layouts */
+.feature-item {
+  margin-bottom: 120px; /* Significantly increased spacing between feature items */
+  opacity: 1; /* Ensure the container itself isn't fading */
+  padding-bottom: 0; /* Removed padding - using margin instead */
+}
+
+.feature-item.reveal .feature-image,
+.feature-item.reveal .feature-details {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Ensure technical explanation section has proper spacing */
+.tech-step {
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+/* Add spacing to comparison table for better rhythm */
+.comparison-table-wrapper {
+  margin: 40px 0;
+}
+
+/* Use transform for testimonial cards instead of just opacity */
+.testimonial-card.reveal {
+  transform: translateY(25px);
+}
+
+.testimonial-card.reveal.active {
+  transform: translateY(0);
+}
+
+/* Add spacing to use case cards */
+.use-case-card {
+  margin-bottom: 20px;
+  min-height: 180px;
+}
+
+/* Fix animation for CTA section */
+.cta-content.reveal {
+  transform: translateY(20px);
+}
+
+.cta-content.reveal.active {
+  transform: translateY(0);
+}
+
+/* Media queries to adjust spacing on mobile */
+@media (max-width: 768px) {
+  .feature-card {
+    min-height: 200px;
+  }
+  
+  .features-grid {
+    gap: 20px;
+  }
+  
+  .feature-item {
+    margin-bottom: 40px;
+  }
+}

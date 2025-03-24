@@ -42,6 +42,33 @@ The MindPattern marketing website has been fully implemented according to the re
 - Implemented marketplace integration for servers installed via Cline marketplace
 - Updated .clinerules with MCP server organization patterns
 
+### New MCP Tool Installations
+#### Git MCP Server
+- Set up Git MCP server (github.com/modelcontextprotocol/servers/tree/main/src/git) to enable Git repository interaction
+- Installed using `pip install mcp-server-git` and configured with `uvx` for execution
+- Created directory at D:\MCP\git-mcp-server following standardized structure
+- Added configuration to cline_mcp_settings.json pointing to the current project repository
+- Created comprehensive documentation:
+  - SETUP_GUIDE.md with installation details and configuration
+  - DEMONSTRATION.md with examples of all Git operations
+- Available Git operations include:
+  - Repository status checks and diff viewing
+  - Staging and commit operations
+  - Branch management (creation, checkout, comparison)
+  - Commit history and log viewing
+
+#### Browser Tools MCP Server
+- Set up BrowserTools MCP server (github.com/AgentDeskAI/browser-tools-mcp) for enhancing browser interaction capabilities
+- Installed the MCP server in the standard D:\MCP directory structure
+- Downloaded and extracted the Chrome extension to D:\MCP\browser-tools-mcp\extension
+- Added the MCP server configuration to cline_mcp_settings.json
+- Created a comprehensive setup guide (SETUP_GUIDE.md) in the server directory
+- Configured server to use the latest version (1.2.0)
+- Documented the browser tools capabilities for future use, including:
+  - Debugging tools (console logs, network monitoring, screenshots, DOM element analysis)
+  - Audit tools (accessibility, performance, SEO, best practices, NextJS-specific checks)
+  - Specialized modes (debugger mode, audit mode)
+
 ### UI/UX Improvements
 - Enhanced pricing page with improved typography and layout
 - Created custom CSS file (pricing-improvements.css) for better pricing display
@@ -71,10 +98,11 @@ The MindPattern marketing website has been fully implemented according to the re
    - Minify and bundle CSS/JS files
    - Implement lazy loading for non-critical resources
 
-3. **Accessibility Improvements**
-   - Conduct a thorough accessibility audit
+3. **Accessibility Improvements with BrowserTools MCP**
+   - Use the newly installed BrowserTools MCP to conduct accessibility audits
    - Implement necessary improvements for WCAG compliance
-   - Test with screen readers and keyboard navigation
+   - Enhance keyboard navigation and screen reader support
+   - Test with multiple audit tools and fix identified issues
 
 4. **Content Refinement**
    - Review and refine copy across all pages

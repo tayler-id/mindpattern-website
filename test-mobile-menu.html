@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Menu Test</title>
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fixes-bundle.css">
+    <style>
+        /* Force mobile viewport for testing */
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+        }
+        
+        /* Additional debugging styles */
+        .debug-info {
+            margin-top: 200px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        
+        .highlight {
+            background-color: yellow;
+            padding: 2px 5px;
+            margin: 2px 0;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with mobile menu toggle -->
+    <header class="site-header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>MindPattern</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="d-flex">
+                    <li><a href="#" class="nav-link">Features</a></li>
+                    <li><a href="#" class="nav-link">Pricing</a></li>
+                    <li><a href="#" class="nav-link">Invest</a></li>
+                    <li><a href="#" class="nav-link">Donate</a></li>
+                    <li><a href="#" class="nav-link">Blog</a></li>
+                    <li><a href="#" class="nav-link">Contact</a></li>
+                    <li><a href="#" class="btn btn-primary">Sign Up</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero section for spacing -->
+    <section class="hero-section bg-gradient-primary">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="text-light">Mobile Menu Testing</h1>
+                <p class="hero-subtitle text-light">This page is for testing the mobile menu functionality</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Debug info -->
+    <div class="container debug-info">
+        <h2>Debug Information</h2>
+        <p>Click the hamburger menu in the top-right corner to toggle the mobile menu.</p>
+        <p>The mobile menu should appear below the header with all navigation links.</p>
+        
+        <div id="events-log">
+            <h3>Events Log:</h3>
+        </div>
+    </div>
+
+    <script>
+    // Script to test mobile menu 
+    document.addEventListener('DOMContentLoaded', function() {
+        // Log area
+        const eventsLog = document.getElementById('events-log');
+        
+        // Create log entry
+        function logEvent(message) {
+            const entry = document.createElement('div');
+            entry.className = 'highlight';
+            entry.textContent = message;
+            eventsLog.appendChild(entry);
+        }
+        
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        
+        // Mobile breakpoint should match CSS media query
+        const mobileBreakpoint = 768;
+        
+        // Function to check viewport and adjust element states accordingly
+        function checkViewportSize() {
+            const windowWidth = window.innerWidth;
+            logEvent(`Window resized to: ${windowWidth}px`);
+            
+            if (windowWidth <= mobileBreakpoint) {
+                // Mobile view
+                mobileMenuToggle.style.display = 'block';
+                mainNav.style.display = ''; // Let CSS control display based on active state
+                logEvent('Switched to mobile view');
+            } else {
+                // Desktop view
+                mobileMenuToggle.style.display = 'none';
+                mainNav.style.display = 'block';
+                
+                // Reset active states when returning to desktop
+                if (mobileMenuToggle.classList.contains('active')) {
+                    mobileMenuToggle.classList.remove('active');
+                    mainNav.classList.remove('active');
+                    
+                    // Reset hamburger icon
+                    const spans = mobileMenuToggle.querySelectorAll('span');
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                    
+                    logEvent('Reset mobile menu active state');
+                }
+                
+                logEvent('Switched to desktop view');
+            }
+        }
+        
+        if (mobileMenuToggle && mainNav) {
+            logEvent('Mobile menu elements found');
+            
+            // Run the check on page load
+            checkViewportSize();
+            
+            // Set up resize event handler
+            window.addEventListener('resize', function() {
+                // Using requestAnimationFrame to throttle and improve performance
+                requestAnimationFrame(checkViewportSize);
+            });
+            
+            // Mobile menu toggle click handler
+            mobileMenuToggle.addEventListener('click', function() {
+                logEvent('Mobile toggle clicked');
+                
+                // Toggle the classes immediately
+                this.classList.toggle('active');
+                mainNav.classList.toggle('active');
+                
+                // Log current state
+                if (this.classList.contains('active')) {
+                    logEvent('Menu is now ACTIVE');
+                } else {
+                    logEvent('Menu is now INACTIVE');
+                }
+                
+                // Display computed styles for debugging
+                logEvent(`Main nav display: ${getComputedStyle(mainNav).display}`);
+                logEvent(`Main nav z-index: ${getComputedStyle(mainNav).zIndex}`);
+                
+                // Toggle menu icon
+                const spans = this.querySelectorAll('span');
+                if (this.classList.contains('active')) {
+                    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+                } else {
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            });
+            
+            // Log initial styles
+            logEvent(`Initial main nav display: ${getComputedStyle(mainNav).display}`);
+            logEvent(`Initial main nav z-index: ${getComputedStyle(mainNav).zIndex}`);
+            logEvent(`Window width: ${window.innerWidth}px`);
+        } else {
+            logEvent('ERROR: Mobile menu elements not found!');
+        }
+    });
+    </script>
+</body>
+</html>

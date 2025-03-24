@@ -5,7 +5,47 @@ document.addEventListener('DOMContentLoaded', function() {
   const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
   const mainNav = document.querySelector('.main-nav');
   
+  // Mobile breakpoint should match CSS media query
+  const mobileBreakpoint = 768;
+  
+  // Function to check viewport and adjust element states accordingly
+  function checkViewportSize() {
+    const windowWidth = window.innerWidth;
+    
+    if (windowWidth <= mobileBreakpoint) {
+      // Mobile view
+      if (mobileMenuToggle) mobileMenuToggle.style.display = 'block';
+      if (mainNav) mainNav.style.display = ''; // Let CSS control display based on active state
+    } else {
+      // Desktop view
+      if (mobileMenuToggle) mobileMenuToggle.style.display = 'none';
+      if (mainNav) mainNav.style.display = 'block';
+      
+      // Reset active states when returning to desktop
+      if (mobileMenuToggle && mobileMenuToggle.classList.contains('active')) {
+        mobileMenuToggle.classList.remove('active');
+        mainNav.classList.remove('active');
+        
+        // Reset hamburger icon
+        const spans = mobileMenuToggle.querySelectorAll('span');
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+      }
+    }
+  }
+  
   if (mobileMenuToggle && mainNav) {
+    // Run the check on page load
+    checkViewportSize();
+    
+    // Set up resize event handler
+    window.addEventListener('resize', function() {
+      // Using requestAnimationFrame to throttle and improve performance
+      requestAnimationFrame(checkViewportSize);
+    });
+    
+    // Mobile menu toggle click handler
     mobileMenuToggle.addEventListener('click', function() {
       this.classList.toggle('active');
       mainNav.classList.toggle('active');

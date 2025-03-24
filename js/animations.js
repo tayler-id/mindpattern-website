@@ -55,14 +55,35 @@ document.addEventListener('DOMContentLoaded', function() {
     const windowHeight = window.innerHeight;
     const revealPoint = 150;
     
-    revealElements.forEach(element => {
-      const elementTop = element.getBoundingClientRect().top;
-      
-      if (elementTop < windowHeight - revealPoint) {
-        element.classList.add('active');
-      } else {
-        element.classList.remove('active');
+    // Store elements in view to reveal them in sequence
+    const elementsToReveal = [];
+    
+    revealElements.forEach((element, index) => {
+      // Only process elements that haven't been revealed yet
+      if (!element.classList.contains('active')) {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementRect = element.getBoundingClientRect();
+        
+        // Check if element is in view
+        if (elementTop < windowHeight - revealPoint) {
+          elementsToReveal.push({
+            element: element,
+            index: index,
+            top: elementTop,
+            height: elementRect.height
+          });
+        }
       }
+    });
+    
+    // Sort elements by vertical position (top to bottom)
+    elementsToReveal.sort((a, b) => a.top - b.top);
+    
+    // Reveal elements with increased delay for further down elements
+    elementsToReveal.forEach((item, index) => {
+      setTimeout(() => {
+        item.element.classList.add('active');
+      }, index * 150); // 150ms delay between each element
     });
   }
   
